@@ -5,6 +5,7 @@ let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 
 let turnX = true;
+let count = 0;
 
 const winPatterns = [
     [0, 1, 2],
@@ -27,10 +28,21 @@ boxes.forEach( (box) => {
             turnX = true;
         }
         box.disabled = true;
+        count++;
 
-        checkWinner();
+        let isWinner = checkWinner();
+
+        if (count === 9 && !isWinner) {
+        gameDraw();
+        }
     });
 });
+
+const gameDraw = () => {
+    msg.innerText = `Game was a Draw.`;
+    msgContainer.classList.remove("hide");
+    disableBoxes();
+};
 
 const checkWinner = () =>{
     for(let pattern of winPatterns){
@@ -67,4 +79,8 @@ const enableBoxes = () =>{
 const resetGame = () =>{
     turnX = true;
     enableBoxes();
+    msgContainer.classList.add("hide");
 }
+
+newGameBtn.addEventListener("click", resetGame);
+resetBtn.addEventListener("click", resetGame);

@@ -1,13 +1,13 @@
 *{
     margin: 0;
     padding: 0;
-
 }
 
 body{
     background-color: #7EACB5;
     text-align: center;
     color: #FFF4EA;
+    font-size: 4vmin;
 }
 
 .container{
@@ -57,12 +57,16 @@ body{
 
 #msg{
     color:#FFF4EA ;
-    font-size: 5vmin;
+    font-size: 7vmin;
 }
 
 .msg-container{
-    height: 30vmin;
-
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 .hide{
