@@ -1,5 +1,8 @@
 let boxes = document.querySelectorAll(".box");
 let resetBtn = document.querySelector("#reset-btn");
+let newGameBtn = document.querySelector("#new-btn");
+let msgContainer = document.querySelector(".msg-container");
+let msg = document.querySelector("#msg");
 
 let turnX = true;
 
@@ -37,8 +40,31 @@ const checkWinner = () =>{
 
         if(pos1value !="" && pos2value !="" && pos3value !=""){
             if(pos1value === pos2value && pos2value === pos3value){
-                
+                showWinner(pos1value);
             }
         }
     }
 };
+
+const showWinner = (winner) =>{
+    msg.innerText = `Congratulations, Winner is ${winner}`;
+    msgContainer.classList.remove("hide");
+    disableBoxes();
+}
+
+const disableBoxes = () =>{
+    for(let box of boxes){
+        box.disabled = true;
+    }
+}
+
+const enableBoxes = () =>{
+    for(let box of boxes){
+        box.disabled = false;
+        box.innerText = "";
+    }
+}
+const resetGame = () =>{
+    turnX = true;
+    enableBoxes();
+}

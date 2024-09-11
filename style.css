@@ -7,6 +7,7 @@
 body{
     background-color: #7EACB5;
     text-align: center;
+    color: #FFF4EA;
 }
 
 .container{
@@ -39,15 +40,15 @@ body{
 }
 
 #reset-btn{
-    background-color: #FFF4EA;
+    background-color: #C96868;
     padding: 1rem;
     font-size: 1.25rem;
     border-radius: 1rem;
     border: none;
 }
 
-.new-button{
-    background-color: #FFF4EA;
+#new-btn{
+    background-color: #C96868;
     padding: 1rem;
     font-size: 1.25rem;
     border-radius: 1rem;
@@ -56,9 +57,14 @@ body{
 
 #msg{
     color:#FFF4EA ;
-    font-size: 8vmin;
+    font-size: 5vmin;
 }
 
 .msg-container{
-    
+    height: 30vmin;
+
+}
+
+.hide{
+    display: none;
 }
