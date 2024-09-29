@@ -6,3 +6,4 @@ https://tic-tac-toe-game-one.netlify.app/
 
 
 ![Screenshot 2024-09-11 222519](https://github.com/user-attachments/assets/17d75c82-f4ce-4662-8fa0-95d93b923ccd)
+![Screenshot 2024-09-29 171801](https://github.com/user-attachments/assets/8e4caefa-5f7e-4aab-8e62-f22e60d2303d)
